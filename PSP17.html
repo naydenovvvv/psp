@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PharmaSchoolProject</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    background: #0a3d62;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* SECTIONS */
+section {
+    display: none;
+    padding: 40px;
+}
+
+.active {
+    display: block;
+}
+
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1588776814546-ec7e1a7c8a1f') center/cover;
+    color: white;
+    padding: 100px;
+    text-align: center;
+}
+
+/* PRODUCTS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f5f6fa;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+button {
+    background: #0a3d62;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>PharmaSchoolProject</h2>
+    <nav>
+        <a onclick="show('home')">Начало</a>
+        <a onclick="show('products')">Продукти</a>
+        <a onclick="show('about')">За нас</a>
+        <a onclick="show('contact')">Контакти</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="active">
+<div style="padding-top: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px; text-align:center;">
+        <h2>Какво предлагаме</h2>
+        <p>Широка гама от лекарства, витамини и медицински продукти.</p>
+    <div style="text-align:center; margin-top:25px;">
+    <img src="https://i.ibb.co/PZNYXK01/PSPhomepage.png"
+         alt="PharmaSchoolProject"
+         style="max-width:600px; width:90%; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+</div>
+
+    <div class="grid" style="padding:40px;">
+        <div class="card">
+            <h3>Качество</h3>
+            <p>Гарантирано високо качество</p>
+        </div>
+
+        <div class="card">
+            <h3>Достъпни цени</h3>
+            <p>Конкурентни цени</p>
+        </div>
+
+        <div class="card">
+            <h3>Бърза доставка</h3>
+            <p>Експресно обслужване</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+    <h2>Нашите продукти</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://marvi.bg/filemanager/files/products/19paracetamol.jpg">
+            <h3>Парацетамол</h3>
+            <p>При болка / температура</p>
+            <p><b>1.12€ / 1.90лв</b></p>
+            <button onclick="show('p1')">Виж</button>
+        </div>
+
+        <div class="card">
+            <img src="https://static.framar.bg/thumbs/6/products/ibuprofen-polfa-dvesta-mg-obviti-tabletki.jpg">
+            <h3>Ибупрофен</h3>
+            <p>При болка / възпаление</p>
+            <p><b>7.46€ / 14.59лв</b></p>
+            <button onclick="show('p2')">Виж</button>
+        </div>
+
+        <div class="card">
+            <img src="https://static.framar.bg/thumbs/6/products/bayer-aspirin-ultra-20tabletki.jpg">
+            <h3>Аспирин</h3>
+            <p>При болка / противовъзпалително</p>
+            <p><b>5.35€ / 10.46лв</b></p>
+            <button onclick="show('p3')">Виж</button>
+        </div>
+
+        <div class="card">
+            <img src="https://static.framar.bg/thumbs/6/products/framar-citrovit-vit-c-tabs.jpg">
+            <h3>Витамин C</h3>
+            <p>Добавка</p>
+            <p><b>1.35€ / 2.64лв</b></p>
+            <button onclick="show('p4')">Виж</button>
+        </div>
+
+        <div class="card">
+            <img src="https://dental.bg/img/010323081328%D0%90%D0%BC%D0%BE%D0%BA%D1%81%D0%B8%D1%86%D0%B8%D0%BB%D0%B8%D0%BD%D0%90%D0%BD%D1%82%D0%B8%D0%B1%D0%B8%D0%BE%D1%82%D0%B8%D0%BA1000%D0%BC%D0%B3.jfif">
+            <h3>Амоксицилин</h3>
+            <p>Антибиотик</p>
+            <p><b>4.52€ / 8.84лв</b></p>
+            <button onclick="show('p5')">Виж</button>
+        </div>
+
+        <div class="card">
+            <img src="https://366.bg/uploads/product-image/image/433x433/original_10305.webp">
+            <h3>Сироп за кашлица</h3>
+            <p>При дихателни симптоми /кашлица</p>
+            <p><b>7.88€ / 15.41лв</b></p>
+            <button onclick="show('p6')">Виж</button>
+        </div>
+
+        <div class="card">
+            <img src="https://www.silabg.com/uf/product/16490_pm_HAYA_MAGNESIUM-CITRATE-200MG_100TABS.jpg">
+            <h3>Магнезий</h3>
+            <p>Добавка</p>
+            <p><b>12.78€ / 25.00лв</b></p>
+            <button onclick="show('p7')">Виж</button>
+        </div>
+
+        <div class="card">
+            <img src="https://static.arteka.bg/8055-medium_default/%D0%B0%D0%BD%D0%B0%D0%BB%D0%B3%D0%B8%D0%BD-%D1%82%D0%B0%D0%B1%D0%BB-500-%D0%BC%D0%B3-%D1%85-20.jpg">
+            <h3>Аналгин</h3>
+            <p>При силна болка / температура</p>
+            <p><b>2.39€ / 4.67лв</b></p>
+            <button onclick="show('p8')">Виж</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- PRODUCT PAGES -->
+<section id="p1">
+    <h2>Парацетамол</h2>
+
+    <img src="https://marvi.bg/filemanager/files/products/19paracetamol.jpg" style="width:300px; max-width:100%; border-radius:10px;">
+
+    <p><b>Тип:</b> Болкоуспокояващо и температуропонижаващо средство</p>
+
+    <p><b>Описание:</b> Парацетамолът се използва за облекчаване на лека до умерена болка и понижаване на температура. Подходящ е при главоболие, зъбобол и настинки.</p>
+
+    <p><b>Действие:</b> Намалява болката и повишената температура.</p>
+
+    <p><b>Употреба:</b> Прилага се при нужда, според указанията за дозиране.</p>
+
+    <p><b>Важно:</b> Да не се превишава препоръчаната дневна доза.</p>
+
+    <button onclick="show('products')">Назад</button>
+</section>
+<section id="p2">
+    <h2>Ибупрофен</h2>
+
+    <img src="https://static.framar.bg/thumbs/6/products/ibuprofen-polfa-dvesta-mg-obviti-tabletki.jpg" style="width:300px; max-width:100%; border-radius:10px;">
+
+    <p><b>Тип:</b> Противовъзпалително и обезболяващо средство</p>
+
+    <p><b>Описание:</b> Ибупрофенът се използва при болка, възпаление и температура. Подходящ е при главоболие, мускулни и ставни болки.</p>
+
+    <p><b>Действие:</b> Намалява възпалението и болката.</p>
+
+    <p><b>Важно:</b> Да се приема след храна и да не се използва продължително без лекарска консултация.</p>
+
+    <button onclick="show('products')">Назад</button>
+</section>
+<section id="p3">
+    <h2>Аспирин</h2>
+
+    <img src="https://static.framar.bg/thumbs/6/products/bayer-aspirin-ultra-20tabletki.jpg" style="width:300px; max-width:100%; border-radius:10px;">
+
+    <p><b>Тип:</b> Обезболяващо и температуропонижаващо средство</p>
+
+    <p><b>Описание:</b> Аспиринът се използва при болка, температура и възпаления. Има бързо действие при главоболие и простуда.</p>
+
+    <p><b>Важно:</b> Не се препоръчва при деца без лекарско предписание.</p>
+
+    <button onclick="show('products')">Назад</button>
+</section>
+<section id="p4">
+    <h2>Витамин C</h2>
+
+    <img src="https://static.framar.bg/thumbs/6/products/framar-citrovit-vit-c-tabs.jpg" style="width:300px; max-width:100%; border-radius:10px;">
+
+    <p><b>Тип:</b> Хранителна добавка</p>
+
+    <p><b>Описание:</b> Витамин C подпомага имунната система и защитава клетките от оксидативен стрес.</p>
+
+    <p><b>Ползи:</b> Подпомага имунитета и общото здраве.</p>
+
+    <button onclick="show('products')">Назад</button>
+</section>
+<section id="p5">
+    <h2>Амоксицилин</h2>
+
+    <img src="https://dental.bg/img/010323081328%D0%90%D0%BC%D0%BE%D0%BA%D1%81%D0%B8%D1%86%D0%B8%D0%BB%D0%B8%D0%BD%D0%90%D0%BD%D1%82%D0%B8%D0%B1%D0%B8%D0%BE%D1%82%D0%B8%D0%BA1000%D0%BC%D0%B3.jfif" style="width:300px; max-width:100%; border-radius:10px;">
+
+    <p><b>Тип:</b> Антибиотик (пеницилинова група)</p>
+
+    <p><b>Описание:</b> Използва се за лечение на бактериални инфекции като инфекции на дихателните пътища, уши и зъби.</p>
+
+    <p><b>Важно:</b> Не действа при вирусни инфекции (грип, настинка).</p>
+
+    <button onclick="show('products')">Назад</button>
+</section>
+<section id="p6">
+    <h2>Сироп за кашлица</h2>
+
+    <img src="https://366.bg/uploads/product-image/image/433x433/original_10305.webp" style="width:300px; max-width:100%; border-radius:10px;">
+
+    <p><b>Тип:</b> Сироп за дихателни пътища</p>
+
+    <p><b>Описание:</b> Облекчава кашлицата и подпомага дишането при настинки и бронхиални възпаления.</p>
+
+    <p><b>Действие:</b> Успокоява и отпуска бронхите.</p>
+
+    <button onclick="show('products')">Назад</button>
+</section>
+<section id="p7">
+    <h2>Магнезий</h2>
+
+    <img src="https://www.silabg.com/uf/product/16490_pm_HAYA_MAGNESIUM-CITRATE-200MG_100TABS.jpg" style="width:300px; max-width:100%; border-radius:10px;">
+
+    <p><b>Тип:</b> Хранителна добавка</p>
+
+    <p><b>Описание:</b> Магнезият подпомага нервната система, мускулите и енергийния баланс в организма.</p>
+
+    <p><b>Ползи:</b> Намалява крампите и умората.</p>
+
+    <button onclick="show('products')">Назад</button>
+</section>
+<section id="p8">
+    <h2>Аналгин</h2>
+
+    <img src="https://static.arteka.bg/8055-medium_default/%D0%B0%D0%BD%D0%B0%D0%BB%D0%B3%D0%B8%D0%BD-%D1%82%D0%B0%D0%B1%D0%BB-500-%D0%BC%D0%B3-%D1%85-20.jpg" style="width:300px; max-width:100%; border-radius:10px;">
+
+    <p><b>Тип:</b> Обезболяващо и температуропонижаващо средство</p>
+
+    <p><b>Описание:</b> Използва се при силна болка и висока температура от различен произход.</p>
+
+    <p><b>Важно:</b> Да се използва внимателно и според дозировка.</p>
+
+    <button onclick="show('products')">Назад</button>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>За нас</h2>
+    <p>PharmaSchoolProject е дипломен проект за представяне на примерен фармацевтичен уебсайт.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Контакти</h2>
+    <p>📞 089 790 75 71</p>
+    <p>📧 naydenovvvv@abv.bg</p>
+</section>
+
+<footer>
+    <p>2026 PharmaSchoolProject</p>
+</footer>
+
+<script>
+function show(id) {
+    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>
